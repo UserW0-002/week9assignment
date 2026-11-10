@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halal Food Truck Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <img src="images/halalLogo.png" alt="Halal logo" class="logo">
+    <h1>Halal Food Truck</h1>
+    <p>Great food and better prices!</p>
+  </header>
+
+  <main class="container">
+
+    <section class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Fresh Halal Street Food</h2>
+      <p>We serve halal chicken, lamb, gyros, and falafel. Grab a rice platter or a warm pita with our tasty sauces.</p>
+      <p><strong>Service area:</strong> Near downtown on Arch/Broad.</p>
+    </section>
+
+    <section aria-labelledby="order-heading">
+      <h2 id="order-heading">Online Order Form</h2>
+      <p id="form-help">Create your online pickup order and enter required information.</p>
+      <form action="order-preview.html" method="get" aria-describedby="form-help">
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label for="customer-name">Customer name (required)</label>
+          <input type="text" id="customer-name" name="customer_name" autocomplete="name" required>
+          <label for="email">Email address (required)</label>
+          <input type="text" id="email" name="email" autocomplete="email">
+          <label for="phone">Phone number (required)</label>
+          <input type="text" id="phone" name="phone" autocomplete="tel">
+        </fieldset>
+
+        <fieldset>
+          <legend>Choose Your Food</legend>
+          <p>Select each item you would like to order.</p>
+        <div class="menu-item">
+          <input type="checkbox" id="chicken" name="food" value="chicken">
+          <label for="chicken"><strong>Chicken Over Rice — $10.00</strong><span>Seasoned chicken with yellow rice and salad.</span></label>
+        </div>
+
+        <div class="menu-item">
+          <input type="checkbox" id="lamb" name="food" value="lamb">
+          <label for="lamb"><strong>Lamb Over Rice — $11.00</strong><span>Grilled lamb with yellow rice and salad.</span></label>
+        </div>
+
+        <div class="menu-item">
+          <input type="checkbox" id="combo" name="food" value="combo">
+          <label for="combo"><strong>Combo Platter — $12.00</strong><span>Chicken and lamb served over rice with salad.</span></label>
+        </div>
+
+        <div class="menu-item">
+          <input type="checkbox" id="gyro" name="food" value="gyro">
+          <label for="gyro"><strong>Chicken Gyro — $8.00</strong><span>Chicken, lettuce, and tomatoes wrapped in warm pita.</span></label>
+        </div>
+
+        <div class="menu-item">
+          <input type="checkbox" id="falafel" name="food" value="falafel">
+          <label for="falafel"><strong>Falafel Over Rice — $9.00</strong><span>Crispy chickpea falafel with rice and salad.</span></label>
+        </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Customize Your Order</legend>
+          <fieldset class="option-group">
+            <legend>Platter size</legend>
+            <p>Applies to each rice platter in your order.</p>
+            <label class="choice"><input type="radio" id="regular" name="size" value="regular" checked> Regular</label>
+            <label class="choice"><input type="radio" id="large" name="size" value="large"> Large (+$2 per platter)</label>
+          </fieldset>
+
+          <fieldset class="option-group">
+            <legend>Toppings and Extras</legend>
+            <label class="choice"><input type="checkbox" id="white-sauce" name="extras" value="white-sauce"> White sauce (free)</label>
+            <label class="choice"><input type="checkbox" id="hot-sauce" name="extras" value="hot-sauce"> Hot sauce (free)</label>
+            <label class="choice"><input type="checkbox" id="pita" name="extras" value="pita"> Extra pita (+$1)</label>
+            <label class="choice"><input type="checkbox" id="hummus" name="extras" value="hummus"> Side of hummus (+$2)</label>
+          </fieldset>
+
+          <label for="drink">Choose a drink</label>
+
+          <select id="drink" name="drink">
+            <option value="none">No drink</option>
+            <option value="water">Bottled water — $1</option>
+            <option value="cola">Cola — $2</option>
+            <option value="lemonade">Lemonade — $2</option>
+            <option value="iced-tea">Iced tea — $2</option>
+          </select>
+
+          <label for="special-instructions">Special food instructions</label>
+
+          <textarea id="special-instructions" name="special_instructions" rows="4" placeholder="Example: No tomatoes and sauce on the side."></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Pickup Information</legend>
+          <label for="pickup-time">Preferred pickup date and time (required)</label>
+          <input type="text" id="pickup-time" name="pickup_time" placeholder="Example: November 12 at 12:30 PM" required>
+          <label for="pickup-name">Pickup name, if different</label>
+          <input type="text" id="pickup-name" name="pickup_name">
+          <label for="pickup-instructions">Additional pickup instructions</label>
+          <textarea id="pickup-instructions" name="pickup_instructions" rows="3" placeholder="Anything else we should know for pickup?"></textarea>
+        </fieldset>
+
+        <div class="buttons">
+          <button type="submit">Submit Order</button>
+          <button type="reset" class="reset">Reset Form</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+  
+  <footer><p>Halal Food Truck | Lee Wren</p></footer>
+</body>
+</html>
